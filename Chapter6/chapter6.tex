@@ -1,0 +1,69 @@
+\documentclass[10pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb, graphicx, multicol, array}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+
+
+\begin{document}
+\title{Chapter 5}
+\author{Huy Nguyen, Hoang Nguyen}
+\maketitle
+    
+\begin{problem}{1}
+
+\[bias(\hat{\lambda})=\mathbb{E}[\hat{\lambda}]-\lambda=\mathbb{E}\big[\frac{\sum_{1}^n X_i}{n}\big]-\lambda=\frac{n\mathbb{E}X_i}{n}-\lambda=\lambda-\lambda=0\]
+
+\[se(\hat{\lambda})=\sqrt{\mathbb{V}(\bar{\lambda})}=\sqrt{\frac{\lambda}{n}}\]
+
+\[MSE=bias(\hat{\lambda})+ se(\hat{\lambda})=0+\frac{\lambda}{n}=\frac{\lambda}{n}\]
+
+
+
+
+\end{problem}
+
+\begin{problem}{2}
+
+\[F_{\hat{\theta}}(x)=\mathbb{P}(\hat{\theta} < x)=\mathbb{P}(\max{X_1,..., X_n} < x)=\mathbb{P}(X_1, X_2,...X_n < x)=\prod_{i=1}^n \mathbb{P}(X_i < x)=\big( \mathbb{P}(X_i < x)\big)^n=\big(\frac{x}{\theta} \big)^n\]
+
+\[\Rightarrow f_{\hat{\theta}}(x)=\frac{d}{dx}F_{\hat{\theta}}(x)=\frac{d}{dx}\big(\frac{x}{\theta} \big)^n=\frac{nx^{n-1}}{\theta^n}  \]
+
+\[\Rightarrow \mathbb{E}[\hat{\theta}]=\int_{0}^{\theta} x\frac{nx^{n-1}}{\theta^n} dx=\frac{n}{n+1}\theta\]
+
+\[\Rightarrow bias(\hat{\theta})= \mathbb{E}[\hat{\theta}]-\theta=\frac{n}{n+1}\theta-\theta=\frac{-\theta}{n+1}\]
+
+\[\mathbb{V}(\hat{\theta})=\mathbb{E}[\hat{\theta}^2]-(\mathbb{E}[\hat{\theta}])^2=\int_{0}^{\theta} x^2\frac{nx^{n-1}}{\theta^n} dx-\big(\frac{n}{n+1}\theta \big)^2=\theta^2\frac{n}{(n+2)(n+1)^2}\]
+
+\[\Rightarrow MSE(\hat{\theta})=\big(\frac{-\theta}{n+1} \big)^2 + \theta^2\frac{n}{(n+2)(n+1)^2} =\frac{2n+2}{(n+2)(n+1)^2}\theta^2\]
+
+
+
+
+
+\end{problem}
+
+\begin{problem}{3}
+
+
+\[bias(\hat{\theta})=\mathbb{E}[\hat{\theta}]-\theta= \mathbb{E}[\frac{2\sum_{i=1}^nX_i}{n}]-\theta=2\mathbb{E}[X_i]-\theta=2\frac{\theta}{2}-\theta=0\]
+
+\[se(\hat{\theta})=\sqrt{\frac{\mathbb{V}(\hat{\theta})}{n}}= \sqrt{\frac{\theta}{n}}\]
+
+\[\Rightarrow MSE=\frac{
+\theta}{n}\]
+
+
+\end{problem}
+
+
+
+
+
+\end{document}
