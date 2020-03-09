@@ -98,6 +98,63 @@ MLE is consistent
 \end{problem}
 
 
+\begin{problem}{5}
+We have $Xi \sim Poissin(\lambda) $
+\[ \Rightarrow E[X_i]= \lambda\]
+Method of moment:
+\[\hat{\lambda}= \frac{1}{n} \sum_{i=1}^{n} X_i\]
+
+Log-likelihood of Poisson:
+\[\mathcal{L}=\log(\lambda)\sum_{i=1}^{n} X_i- n\lambda-\sum_{i=1}^{n} \log(X_i!)\]
+\[  \frac{d\mathcal{L}}{d\lambda}=0 \Leftrightarrow \frac{\sum_{
+i=1}^{n}X_i}{\hat{\lambda}}-n =0\]
+\[ \Leftrightarrow \hat{\lambda}= \frac{\sum_{i=1}^{n}X_i}{n}\]
+
+Fisher Information:
+\[I(\lambda)= -\mathbb{E}[\frac{d^2\mathcal{L}}{d\lambda^2}]=-\mathbb{E}[-\frac{\sum_{i=1}^{n} X_i}{\lambda ^2}]=\frac{1}{\lambda}\]
+\end{problem}
+
+
+\begin{problem}{6}
+a) \\
+MLE of $\theta$ : $\hat{\theta}=\bar{X_n}$
+
+We have
+\[\psi =\mathbb{P}(Y_1=1)=\mathbb{P}(X_1 > 0)= \phi (\theta)\]
+By the equivariance property of MLE :
+\[\hat{\psi} = \phi (\hat{\theta})\]
+b) \\
+
+We have Standard deviation of $\hat{\theta}$: $\hat{se} (\hat{\theta})=\sqrt{\frac{\phi ^2}{n}}=\sqrt{\frac{1}{n}}$
+
+Apply Delta Method we get :
+\[\hat{se} (\hat{\psi})= |\sigma '(\hat{\theta})|\hat{se} (\hat{\theta})=|\phi '(\hat{\theta})| \sqrt{\frac{1}{n}}\]
+
+We get the Confident Interval: $C_n= \hat{\psi} \pm |\sigma '(\hat{\theta})| \sqrt{\frac{1}{n}}$
+c) \\
+
+From Central Limit Theorem, we get:
+\[\sqrt{n} (\hat{\theta}- \theta) \rightarrow \mathbb{N}(0,1)\]
+
+Apply Delta Method with $\psi= \phi (\theta)$
+\[\sqrt{n} ( \phi \big(\hat{\theta})- \phi(\theta)\big) \rightarrow \mathbb{N}(0,|\phi '(\theta)|)\]
+
+In addition : $\phi '(\theta)=\frac{1}{\sqrt{2\pi}}$
+
+Hence:
+\[\sqrt{n} ( \hat{\psi}- \psi) \rightarrow \mathbb{N}(0,\frac{1}{\sqrt{2\pi}})\]
+
+On the other hand, $Y_i \sim Bernulli(\psi)$ from Central Limit Theorem, we get:
+\[\sqrt{n} ( \tilde{\psi}- \psi) \rightarrow \mathbb{N}\big(0,\psi(1-\psi)\big)=\mathbb{N}\big(0,\phi(\theta)(1-\phi (\theta))\big)=\mathbb{N}(0, \frac{1}{4})   \text{       because }(\phi(\theta)=\frac{1}{2})\]
+
+Hence, the asymptotic relative efficiency of $\tilde{\psi}$ and $\hat{\psi}$ : $\sqrt{\frac{2}{\pi}}$\\
+d) \\
+
+Updated
+
+\end{problem}
+
+
 
 
 
