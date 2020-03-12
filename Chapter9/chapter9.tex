@@ -155,6 +155,56 @@ Updated
 \end{problem}
 
 
+\begin{problem}{7}
+a) \\
+
+$X_1 \sim Binomial(n_1, p_1)  $, $X_2 \sim Binomial(n_2, p_2) \Rightarrow$ MLE of $p_1$ and $p_2$ : $\hat{p_1}= \frac{X_1}{n_1}$ , $\hat{p_2}= \frac{X_2}{n_2}$\\
+By the equivariance property of MLE, MLE of $\psi$ : $\hat{\psi}= \hat{p_1} -\hat{p_2}= \frac{X_1}{n_1}- \frac{X_2}{n_2}$\\
+\\
+b)\\
+
+We have data $X= (X_1, X_2)$
+
+The log- likelihood of data:
+\[\mathcal{L}=\log (f(X_1, X_2))=\log \big(\prod_{i=1}^{2}\begin{pmatrix}
+n_i\\
+X_i
+\end{pmatrix} p_i^{X_i}(1-p_i)^{n_i-X_i} \big)= \log \big(\begin{pmatrix}
+n_1\\
+X_1
+\end{pmatrix}  \big) + X_1\log(p_1) + (n_1- X_1) \log(1-p_1)\]
+\[+ \log \big(\begin{pmatrix}
+n_2\\
+X_2
+\end{pmatrix}  \big) + X_2\log(p_2) + (n_2- X_2) \log(1-p_2) \]
+Hence: 
+\[H_{11}=\frac{\partial ^2 \mathcal{L}(X_1, X_2) }{\partial X_1 ^2}= \frac{-X_1}{p_1 ^2} -\frac{n_1-X_1}{(1-p_1)^2} \Rightarrow \mathbb{E}[H_11]= \frac{-n_1}{p_1}- \frac{n_1}{1-p_1}=\frac{-n_1}{p_1 (1- p_1)}\]
+\[H_{12}=H_{21}= \frac{\partial ^2 \mathcal{L}(X_1, X_2) }{\partial X_1 \partial X_2}=0 \Rightarrow \mathbb{E}[H_{11}]=\mathbb{E}[H_{21}]=0\]
+\[H_{22}=\frac{\partial ^2 \mathcal{L}(X_1, X_2) }{\partial X_2 ^2}= \frac{-X_2}{p_2 ^2} -\frac{n_2-X_2}{(1-p_2)^2} \Rightarrow \mathbb{E}[H_22]= \frac{-n_2}{p_2}- \frac{n_2}{1-p_2}=\frac{-n_2}{p_2 (1- p_2)}\]
+
+Hence:
+\[I_n (p_1, p_2)=-\mathbb{E}[H]=\begin{bmatrix}
+\frac{-n_1}{p_1 (1- p_1)} & 0 \\
+0 & \frac{-n_2}{p_2 (1- p_2)} 
+\end{bmatrix}\]
+
+c)\\
+\[J_n= I_n ^{-1}(p_1, p_2)=\begin{bmatrix}
+\frac{p_1 (1- p_1)}{n_1} & 0 \\
+0 & \frac{p_2 (1- p_2)}{n_2} 
+\end{bmatrix} \]
+
+On the other hand, we have function g: $g(p_1, p_2)= p_1- p_2 \Rightarrow \nabla g= \begin{bmatrix}
+1 \\
+-1 
+\end{bmatrix}$\\
+\[\Rightarrow \hat{se}(\hat{\psi})=\sqrt{\nabla g^T J_n \nabla g}= \sqrt{\frac{p_1(1-p_1)}{n_1}+ \frac{p_2(1-p_2)}{n_2}}\]
+\end{problem}
+
+d)\\
+\[C_n =\big( \hat{\psi} - z_{\alpha /2}\sqrt{\frac{p_1(1-p_1)}{n_1}+ \frac{p_2(1-p_2)}{n_2}}, \hat{\psi} + z_{\alpha /2}\sqrt{\frac{p_1(1-p_1)}{n_1}+ \frac{p_2(1-p_2)}{n_2}} \big)\]
+
+
 
 
 
