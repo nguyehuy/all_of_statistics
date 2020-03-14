@@ -199,10 +199,34 @@ On the other hand, we have function g: $g(p_1, p_2)= p_1- p_2 \Rightarrow \nabla
 -1 
 \end{bmatrix}$\\
 \[\Rightarrow \hat{se}(\hat{\psi})=\sqrt{\nabla g^T J_n \nabla g}= \sqrt{\frac{p_1(1-p_1)}{n_1}+ \frac{p_2(1-p_2)}{n_2}}\]
-\end{problem}
 
 d)\\
 \[C_n =\big( \hat{\psi} - z_{\alpha /2}\sqrt{\frac{p_1(1-p_1)}{n_1}+ \frac{p_2(1-p_2)}{n_2}}, \hat{\psi} + z_{\alpha /2}\sqrt{\frac{p_1(1-p_1)}{n_1}+ \frac{p_2(1-p_2)}{n_2}} \big)\]
+
+
+\end{problem}
+
+
+
+\begin{problem}{8}
+
+$X_i \sim \mathbb{N}(0, \mu) $, log- likelihood is :
+\[\mathcal{L}(\mu, \sigma)=\log\big(\prod_{i=1}^{n}\frac{1}{\sqrt{2\pi\sigma ^2}} \exp (\frac{-1}{2\sigma ^2}(x-\mu)^2) \big)=\sum_{i=1}^{n}\log(\frac{1}{2\pi}) + \sum_{i=1}^{n}\log(\sigma)- \frac{1}{2\sigma ^2} \sum_{i=1}^{n}(x-\mu)^2\] 
+
+Hence, :
+\[\frac{\partial ^2 \mathcal{L}(\mu, \sigma)}{\partial \mu ^2}= -\frac{n}{\sigma ^2} \Rightarrow H_{11}= -\mathbb{E}[\frac{-n}{\sigma ^2}]= \frac{n}{\sigma ^2}\]
+\[\frac{\partial ^2 \mathcal{L}}{\partial \mu \partial \sigma}= \frac{\partial ^2 \mathcal{L}}{\partial \sigma\partial \mu }= 0 \Rightarrow H_{12}=H_{21}=0\]
+\[\frac{\partial ^2 \mathcal{L}(\mu, \sigma)}{\partial \sigma ^2}= \frac{n}{\sigma ^2} -\frac{3}{\sigma ^2} \sum_{i=1}^{n}(x-\mu)^2 \Rightarrow H_{22}= -\mathbb{E}[\frac{n}{\sigma ^2} -\frac{3}{\sigma ^2} \sum_{i=1}^{n}(x-\mu)^2]= \frac{2n}{\sigma ^2}\]
+
+\[\Rightarrow I_n(\mu, \sigma)= \begin{bmatrix}
+\frac{n}{\sigma ^2} & 0 \\
+0 & \frac{2n}{\sigma ^2} 
+\end{bmatrix}\]
+
+
+\end{problem}
+
+
 
 
 
