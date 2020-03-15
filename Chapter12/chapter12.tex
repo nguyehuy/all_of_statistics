@@ -32,7 +32,19 @@ Under least mean square:
 \[R(\hat{p}, p)= Var(\hat{p})+ (p-\mathbb{E}[\hat{p}])^2=\frac{Var(x)}{(n+\alpha + \beta)^2}+ \big( p-\frac{\mathbb{E}[x]+\alpha}{n+ \alpha + \beta}\big)^2= \frac{np(1-p)}{(n+ \alpha + \beta)^2} + \frac{(p(\alpha + \beta)-\alpha)^2}{(n+ \alpha + \beta)^2}\]
 Hence, Bayes risk :
 \[r(f, \hat{p})= \mathbb{E}_f [R(p, \hat{p})]= \mathbb{E}_f \big [ \frac{np(1-p)}{(n+ \alpha + \beta)^2} \big] + \mathbb{E}_f \big [ \frac{(p(\alpha + \beta)-\alpha)^2}{(n+ \alpha + \beta)^2} \big ]=\frac{n\alpha \beta}{(\alpha + \beta)^2 (n+ \alpha + \beta)^2}\]
+b) 
+\[X \sim Poison(\alpha) \Rightarrow f(x|\alpha) \propto  \lambda ^x e^{-\lambda}\]
+\[ \Rightarrow \pi (\lambda | x) \propto \lambda ^x e^{-\lambda} \lambda ^{\alpha -1} e^{-\beta \lambda}= \lambda ^{x+\lambda -1} e^ {-\lambda (\beta + 1)}\]
+\[\Rightarrow \lambda|x \sim Gamma(x+\lambda, \beta + 1) \Rightarrow \hat{\lambda}=\frac{x+\lambda}{\beta + 1}\]
 
+Similarly from above question, we get:
+\[R(\hat{\lambda}, \lambda)=\frac{\lambda + \alpha}{(\beta +1)^2} +\frac{(\alpha -\lambda \beta)^2}{(\beta +1)^2}\]
+\[\Rightarrow r(f, \hat{\lambda})= \mathbb{E}_f[R(\hat{\lambda}, \lambda)]= \frac{\lambda}{\beta (\beta +1)^2}\]
+c) 
+Similarly from above questions, we get:
+\[\theta | x \sim \mathbb{N}\big( \frac{b^2}{\sigma ^2 + b^2}x+\frac{\sigma ^2}{\sigma ^2 + b^2}a,(\frac{1}{\sigma ^2}+ \frac{1}{b^2})^{-1}\big) \Rightarrow \hat{\theta}= \frac{b^2}{\sigma ^2 + b^2}x+\frac{\sigma ^2}{\sigma ^2 + b^2}a\]
+Bayes risk:
+\[r(f, \hat{\theta})= \frac{b^4 \sigma ^2}{(\sigma ^2 + b^2)^2}+ \frac{\sigma ^2 b^2}{(\sigma ^2 + b^2)^2}\]
 
 
 
