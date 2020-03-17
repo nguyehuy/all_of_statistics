@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.10)  17 MAR 2020 12:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.10)  17 MAR 2020 13:35
 entering extended mode
 **./chapter12.tex
 (chapter12.tex
@@ -351,35 +351,53 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 17.
 ("C:\Users\User\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Overfull \hbox (40.13547pt too wide) detected at line 59
+\OML/cmm/m/it/10 r\OT1/cmr/m/n/10 ([]\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 X\OT1/c
+mr/m/n/10 ) = [] \OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ; []\OT1/
+cmr/m/n/10 )\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 \OMS/cmsy/m/n/
+10 j\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 d \OT1/cmr/m/n/10 = []
+ []\U/msb/m/n/10 N\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 )\OML
+/cmm/m/it/10 d \OT1/cmr/m/n/10 = [][] [] \OML/cmm/m/it/10 []\U/msb/m/n/10 N\O
+T1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 d \OMS
+/cmsy/m/n/10   [] \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 []\U/msb/m/n/10 N\OT1/cmr/
+m/n/10 ([]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 d \OT1/cmr/m/
+n/10 + [] []\U/msb/m/n/10 N\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n
+/10 )\OML/cmm/m/it/10 d[]
+ []
+
 [1
 
-{C:/Users/User/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-(chapter12.aux) ) 
+{C:/Users/User/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+[2] (chapter12.aux) ) 
 Here is how much of TeX's memory you used:
  3061 strings out of 492895
  42793 string characters out of 3124202
- 122182 words of memory out of 3000000
+ 123182 words of memory out of 3000000
  6930 multiletter control sequences out of 15000+200000
  10591 words of font info for 42 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,7n,32p,294b,199s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/User/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmbx10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/User/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/User/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/User/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/
-Users/User/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
-10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmr12.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr17.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/User/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/User/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/User/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-<C:/Users/User/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/sy
-mbols/msbm7.pfb>
-Output written on chapter12.pdf (2 pages, 130606 bytes).
+ 41i,7n,32p,441b,199s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/User/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmbx10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/User/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/User/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/U
+ser/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
+<C:/Users/User/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr12.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr17.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/User/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/User/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Use
+r/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb><C:/Users/User/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/symbols/msbm7.pfb>
+Output written on chapter12.pdf (2 pages, 133844 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

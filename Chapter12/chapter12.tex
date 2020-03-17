@@ -50,6 +50,24 @@ Bayes risk:
 
 \end{problem}
 
+
+\begin{problem}{2}
+
+Let prior probability $f(\theta)= 1$. You can prove your self that:
+\[\theta| X \sim \mathbb{N}(\bar{X}, \frac{\sigma ^2}{n})\]
+The posterior risk:
+\[r(\hat{\theta}|X)=\int L(\theta, \hat{\theta})f(\theta | x)d\theta =\int \frac{(\theta -\hat{\theta})^2}{\sigma ^2}\mathbb{N}(\bar{X}, \frac{\sigma ^2}{n})d\theta =\frac{1}{\sigma ^2} \big[ \int \theta ^2 \mathbb{N}(\bar{X}, \frac{\sigma ^2}{n})d\theta - \int 2\theta \hat{\theta} \mathbb{N}(\bar{X}, \frac{\sigma ^2}{n})d\theta + \int \hat{\theta} ^2 \mathbb{N}(\bar{X}, \frac{\sigma ^2}{n})d\theta  \big]\] 
+\[=\frac{1}{\sigma ^2} \big [ \mathbb{E}[\theta ^2 | X] - \hat{\sigma}\mathbb{E|X}[\theta]  + \hat{\theta}^2 \big]= \frac{1}{\sigma ^2} \big[Var(\theta|X)   + E[\theta | X]^2 - 2\hat{\theta}\mathbb{E|X}[\theta]  + \hat{\theta}^2 \big] \]
+\[=\frac{1}{\sigma ^2 }\big [ \frac{\sigma ^2}{n} + \bar{X} ^2 - 2\hat{\theta}\bar{X} + \hat{\theta} ^2 \big]\]
+
+Minimize the posterior risk we get the Bayes estimator, take the derivative of the above equation we get $\hat{\theta}= \bar{X} $ is the Bayes estimator $ \Rightarrow \bar{\theta}$ is admissible \\
+
+In addition, with $\theta = \bar{X}$, we get the posterior  risk is $\frac{1}{n}$, hence, the Bayes risk is constant $\Rightarrow \hat{\theta}$ is minimax
+
+
+
+\end{problem}
+
 \begin{problem}{3}
  
 We have:
