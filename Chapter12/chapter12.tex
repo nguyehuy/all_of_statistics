@@ -12,7 +12,7 @@
 
 
 \begin{document}
-\title{Chapter 6}
+\title{Chapter 12}
 \author{Huy Nguyen, Hoang Nguyen}
 \maketitle
     
@@ -75,148 +75,26 @@ In addition, $\mathbb{E}[S^2]= \sigma ^2$, hence:
 Take the derivative of the right-hand side, we get : b=1
 
 
-$X_i \sim Uniform(0, \theta) \Rightarrow$ Likelihood of X:
-\[\mathcal{L}=\prod_{i=1}^{n}f(x)=\prod_{i=1}^{n}\frac{1}{\theta} I(0 \leq X_i \leq \theta )=\frac{1}{\theta ^n}I(0 \leq X_1, X_2,...,X_n \leq \theta)\]
-$\Rightarrow \mathcal{L} $ max when $\theta= \hat{\theta}= X_{(n)}$ 
-
-We have:
-\[\mathbb{P}(|\hat{\theta}-\theta| < \epsilon) =\mathbb{P}(\hat{\theta}< \theta-\epsilon)+\mathbb{P}(\hat{\theta} > \theta + \epsilon)=\mathbb{P}(\hat{\theta} < \theta-\epsilon )=\big(\frac{\theta- \epsilon}{\theta}\big)^n \rightarrow 0\]
-
-MLE is consistent
-
-
-
 
 \end{problem}
 
 
 \begin{problem}{5}
-We have $Xi \sim Poissin(\lambda) $
-\[ \Rightarrow E[X_i]= \lambda\]
-Method of moment:
-\[\hat{\lambda}= \frac{1}{n} \sum_{i=1}^{n} X_i\]
+We have $L(p, \hat{p})=\big(1-\frac{\hat{p}}{p} \big)^2$ \\
+Apply Jessen's inequality: $ \mathbb{E}_p[\hat{p} ^2] \geq {\mathbb{E}_p [\tilde{p}]}^2$, We get:
+\[R(p, \tilde{p})=\mathbb{E}_{p}[L(p, \tilde{p})]=1-\frac{2\mathbb{E}_p[\tilde{p}]}{p}+\frac{{\mathbb{E}_p [\tilde{p}^2]}}{p^2} \geq \big(1-\frac{\mathbb{E}_p [\tilde\hat{p}]}{p} \big)^2  \] 
+In addition $\big(1-\frac{\mathbb{E}_p [\tilde\hat{p}]}{p} \big)^2  \leq 1 $, Hence:
+\[ inf_{\tilde{p}} sup_{p}R(p, \tilde{p})= 1\]
 
-Log-likelihood of Poisson:
-\[\mathcal{L}=\log(\lambda)\sum_{i=1}^{n} X_i- n\lambda-\sum_{i=1}^{n} \log(X_i!)\]
-\[  \frac{d\mathcal{L}}{d\lambda}=0 \Leftrightarrow \frac{\sum_{
-i=1}^{n}X_i}{\hat{\lambda}}-n =0\]
-\[ \Leftrightarrow \hat{\lambda}= \frac{\sum_{i=1}^{n}X_i}{n}\]
-
-Fisher Information:
-\[I(\lambda)= -\mathbb{E}[\frac{d^2\mathcal{L}}{d\lambda^2}]=-\mathbb{E}[-\frac{\sum_{i=1}^{n} X_i}{\lambda ^2}]=\frac{1}{\lambda}\]
-\end{problem}
-
-
-\begin{problem}{6}
-a) \\
-MLE of $\theta$ : $\hat{\theta}=\bar{X_n}$
-
-We have
-\[\psi =\mathbb{P}(Y_1=1)=\mathbb{P}(X_1 > 0)= \phi (\theta)\]
-By the equivariance property of MLE :
-\[\hat{\psi} = \phi (\hat{\theta})\]
-b) \\
-
-We have Standard deviation of $\hat{\theta}$: $\hat{se} (\hat{\theta})=\sqrt{\frac{\phi ^2}{n}}=\sqrt{\frac{1}{n}}$
-
-Apply Delta Method we get :
-\[\hat{se} (\hat{\psi})= |\sigma '(\hat{\theta})|\hat{se} (\hat{\theta})=|\phi '(\hat{\theta})| \sqrt{\frac{1}{n}}\]
-
-We get the Confident Interval: $C_n= \hat{\psi} \pm |\sigma '(\hat{\theta})| \sqrt{\frac{1}{n}}$
-c) \\
-
-From Central Limit Theorem, we get:
-\[\sqrt{n} (\hat{\theta}- \theta) \rightarrow \mathbb{N}(0,1)\]
-
-Apply Delta Method with $\psi= \phi (\theta)$
-\[\sqrt{n} ( \phi \big(\hat{\theta})- \phi(\theta)\big) \rightarrow \mathbb{N}(0,|\phi '(\theta)|)\]
-
-In addition : $\phi '(\theta)=\frac{1}{\sqrt{2\pi}}$
-
-Hence:
-\[\sqrt{n} ( \hat{\psi}- \psi) \rightarrow \mathbb{N}(0,\frac{1}{\sqrt{2\pi}})\]
-
-On the other hand, $Y_i \sim Bernulli(\psi)$ from Central Limit Theorem, we get:
-\[\sqrt{n} ( \tilde{\psi}- \psi) \rightarrow \mathbb{N}\big(0,\psi(1-\psi)\big)=\mathbb{N}\big(0,\phi(\theta)(1-\phi (\theta))\big)=\mathbb{N}(0, \frac{1}{4})   \text{       because }(\phi(\theta)=\frac{1}{2})\]
-
-Hence, the asymptotic relative efficiency of $\tilde{\psi}$ and $\hat{\psi}$ : $\sqrt{\frac{2}{\pi}}$\\
-d) \\
-
-Updated
-
-\end{problem}
-
-
-\begin{problem}{7}
-a) \\
-
-$X_1 \sim Binomial(n_1, p_1)  $, $X_2 \sim Binomial(n_2, p_2) \Rightarrow$ MLE of $p_1$ and $p_2$ : $\hat{p_1}= \frac{X_1}{n_1}$ , $\hat{p_2}= \frac{X_2}{n_2}$\\
-By the equivariance property of MLE, MLE of $\psi$ : $\hat{\psi}= \hat{p_1} -\hat{p_2}= \frac{X_1}{n_1}- \frac{X_2}{n_2}$\\
-\\
-b)\\
-
-We have data $X= (X_1, X_2)$
-
-The log- likelihood of data:
-\[\mathcal{L}=\log (f(X_1, X_2))=\log \big(\prod_{i=1}^{2}\begin{pmatrix}
-n_i\\
-X_i
-\end{pmatrix} p_i^{X_i}(1-p_i)^{n_i-X_i} \big)= \log \big(\begin{pmatrix}
-n_1\\
-X_1
-\end{pmatrix}  \big) + X_1\log(p_1) + (n_1- X_1) \log(1-p_1)\]
-\[+ \log \big(\begin{pmatrix}
-n_2\\
-X_2
-\end{pmatrix}  \big) + X_2\log(p_2) + (n_2- X_2) \log(1-p_2) \]
-Hence: 
-\[H_{11}=\frac{\partial ^2 \mathcal{L}(X_1, X_2) }{\partial X_1 ^2}= \frac{-X_1}{p_1 ^2} -\frac{n_1-X_1}{(1-p_1)^2} \Rightarrow \mathbb{E}[H_11]= \frac{-n_1}{p_1}- \frac{n_1}{1-p_1}=\frac{-n_1}{p_1 (1- p_1)}\]
-\[H_{12}=H_{21}= \frac{\partial ^2 \mathcal{L}(X_1, X_2) }{\partial X_1 \partial X_2}=0 \Rightarrow \mathbb{E}[H_{11}]=\mathbb{E}[H_{21}]=0\]
-\[H_{22}=\frac{\partial ^2 \mathcal{L}(X_1, X_2) }{\partial X_2 ^2}= \frac{-X_2}{p_2 ^2} -\frac{n_2-X_2}{(1-p_2)^2} \Rightarrow \mathbb{E}[H_22]= \frac{-n_2}{p_2}- \frac{n_2}{1-p_2}=\frac{-n_2}{p_2 (1- p_2)}\]
-
-Hence:
-\[I_n (p_1, p_2)=-\mathbb{E}[H]=\begin{bmatrix}
-\frac{-n_1}{p_1 (1- p_1)} & 0 \\
-0 & \frac{-n_2}{p_2 (1- p_2)} 
-\end{bmatrix}\]
-
-c)\\
-\[J_n= I_n ^{-1}(p_1, p_2)=\begin{bmatrix}
-\frac{p_1 (1- p_1)}{n_1} & 0 \\
-0 & \frac{p_2 (1- p_2)}{n_2} 
-\end{bmatrix} \]
-
-On the other hand, we have function g: $g(p_1, p_2)= p_1- p_2 \Rightarrow \nabla g= \begin{bmatrix}
-1 \\
--1 
-\end{bmatrix}$\\
-\[\Rightarrow \hat{se}(\hat{\psi})=\sqrt{\nabla g^T J_n \nabla g}= \sqrt{\frac{p_1(1-p_1)}{n_1}+ \frac{p_2(1-p_2)}{n_2}}\]
-
-d)\\
-\[C_n =\big( \hat{\psi} - z_{\alpha /2}\sqrt{\frac{p_1(1-p_1)}{n_1}+ \frac{p_2(1-p_2)}{n_2}}, \hat{\psi} + z_{\alpha /2}\sqrt{\frac{p_1(1-p_1)}{n_1}+ \frac{p_2(1-p_2)}{n_2}} \big)\]
-
+On the other hands:
+\[R(p, \hat{p})= 1-\frac{2\mathbb{E}_p[\hat{p}]}{p}+\frac{{\mathbb{E}_p [\hat{p}^2]}}{p^2}=1\]
+\[ \Rightarrow sup_{p}R(p, \hat{p})=1= inf_{\tilde{p}} sup_{p}R(p, \tilde{p})\]
+Therefore, $\hat{p}$ is minimax rule
 
 \end{problem}
 
 
 
-\begin{problem}{8}
-
-$X_i \sim \mathbb{N}(0, \mu) $, log- likelihood is :
-\[\mathcal{L}(\mu, \sigma)=\log\big(\prod_{i=1}^{n}\frac{1}{\sqrt{2\pi\sigma ^2}} \exp (\frac{-1}{2\sigma ^2}(x-\mu)^2) \big)=\sum_{i=1}^{n}\log(\frac{1}{2\pi}) + \sum_{i=1}^{n}\log(\sigma)- \frac{1}{2\sigma ^2} \sum_{i=1}^{n}(x-\mu)^2\] 
-
-Hence, :
-\[\frac{\partial ^2 \mathcal{L}(\mu, \sigma)}{\partial \mu ^2}= -\frac{n}{\sigma ^2} \Rightarrow H_{11}= -\mathbb{E}[\frac{-n}{\sigma ^2}]= \frac{n}{\sigma ^2}\]
-\[\frac{\partial ^2 \mathcal{L}}{\partial \mu \partial \sigma}= \frac{\partial ^2 \mathcal{L}}{\partial \sigma\partial \mu }= 0 \Rightarrow H_{12}=H_{21}=0\]
-\[\frac{\partial ^2 \mathcal{L}(\mu, \sigma)}{\partial \sigma ^2}= \frac{n}{\sigma ^2} -\frac{3}{\sigma ^2} \sum_{i=1}^{n}(x-\mu)^2 \Rightarrow H_{22}= -\mathbb{E}[\frac{n}{\sigma ^2} -\frac{3}{\sigma ^2} \sum_{i=1}^{n}(x-\mu)^2]= \frac{2n}{\sigma ^2}\]
-
-\[\Rightarrow I_n(\mu, \sigma)= \begin{bmatrix}
-\frac{n}{\sigma ^2} & 0 \\
-0 & \frac{2n}{\sigma ^2} 
-\end{bmatrix}\]
-
-
-\end{problem}
 
 
 
